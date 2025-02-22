@@ -79,4 +79,3 @@ function function1(a, b) {
   return a + b;
 }
 
-function1(1,2);
