@@ -1,124 +1,120 @@
-/*margin khoảng cách lề bên ngoài */
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-}
-
-.box {
-      width: 200px;
-      height: 200px;
-      background-color: navajowhite;
-      color: navy;
-      
-      /*short hand*/
-      /*top right bottom left */
-      margin : 50px 20px 100px 150px;
-
-      /*top right-left bottom*/
-      margin : 50px 20px 150px;
-      /*tường minh*/
-      /* margin-top: 50px;
-      margin-bottom: 100px; */
-
-      /* auto tự động căn chỉnh left right*/ 
-      margin: 0 auto;
-
-      /* padding lề bên trong tạo vùng đệm cho element */
-      padding: 50px;
-      padding: 10px 10px 10px 10px;
-      padding : 15px 20px 15px;
-
-      /*border*/
-      border: 20px solid green;
-      /*padding border làm tăng kích thước và phải tìm cách xử lý động
-      -> dùng box-sizing*/
-      box-sizing: border-box;
-      /* box-sizing: content-box; chỉ dùng khi muốn border-box trở về như default*/
-}
-
-.section{
-      padding: 15px 0px 15px;
-}
-
-.section-title {
-      color: green;
-      font-size: large;
-      font-weight: 700;
-      text-align: center;
-}
-
-.section-title-position {
-      color: brown;
-      font-size: x-large;
-      /*mặc định đã là static rồi chỉ dùng khi muốn reset ghi đè lại từ đầu*/
-      position:static;
-      position: relative;
-      left: 150px;
-      top: 100px;
-}
-
-.box {
-      position: static;
-      position: relative;
-      left: 10px;
-      top:25px;
-}
-
-.children {
-      /*absolute dịch chuyển theo thằng cha gần nhất có position # static*/
-      position: absolute;
-      right : 0px;
-      padding: 20px;
-}
-
-.header {
-      padding : 20px 150px 20px;
-      top: 0px;
-      left: 0px;
+.section {
       width: 100%;
-      background-color: antiquewhite;
-      z-index: 1;
-      /* position: fixed; */
-      position: sticky;
+      height: 100%;
+      background-color: #2B2B2B;
+
+
 }
 
 .container {
-      max-width: 1050px;
       width: 100%;
-      margin: 0 auto;
-      background-color: aqua;
-      box-sizing: border-box;
+      max-width: 1050px;
+      margin : auto;
+      margin: 80px 195px 195px 80px auto;
+      padding-bottom: 80px;
 }
 
-.creator-item {
-      width: calc((100% - 90px) / 4);
+.headline-button{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 60px;
+      padding-top: 80px;
 }
+
+.button {
+}
+
+.title {
+      color: #FFFFFF;
+      gap: 100px;
+      height: 94px;
+}
+.creator-list {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+      gap: 30px;
+      justify-content: center;
+      padding-left: 0px;
+      padding-right: 0px;
+      list-style: none;
+}
+.creator-item {
+      position: relative;
+      width: calc((100% - 90px) / 4);
+      display: flex;
+}
+
+.creator-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #3B3B3B;
+      position: relative;
+      height: 250px;
+      width: 250px;
+      border-radius: 20px;
+      
+}
+
+.ranking-number {
+      position: absolute;
+      display :flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      top: 15px;
+      left: 15px;
+      background-color: #2B2B2B;
+
+}
+
+.ranking-number p {
+      text-align: center;
+      color: #858584;
+}
+
+
 
 .creator-image {
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 120px;
       height: 120px;
+      margin-top: 20px;
+}
+
+.creator-image img{
       border-radius: 50%;
-      overflow: hidden;
+      width: 100%;
+      height: 100%;
 }
 
-
-.creator-card {
-      background-color: grey;
-}
-
-.creator-info {
+.creator-info{
       text-align: center;
-      color: white;
+}
+.creator-name {
+      font-weight: 600;
+      font-size: 22px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #FFFFFF;
 }
 
-/*flex container*/
-.creator-list {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      flex-wrap: wrap;
+.creator-sale {
+      color: #858584;
+      font-weight: 400;
+      size: 16px;
 }
-/*Flex border*/
+
+.sale-price {
+      color: #FFFFFF;
+      size: 16px;
+      font-family: 'Courier New', Courier, monospace;
+}

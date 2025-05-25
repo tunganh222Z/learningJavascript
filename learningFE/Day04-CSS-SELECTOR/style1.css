@@ -1,0 +1,124 @@
+/*margin khoảng cách lề bên ngoài */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+.box {
+      width: 200px;
+      height: 200px;
+      background-color: navajowhite;
+      color: navy;
+      
+      /*short hand*/
+      /*top right bottom left */
+      margin : 50px 20px 100px 150px;
+
+      /*top right-left bottom*/
+      margin : 50px 20px 150px;
+      /*tường minh*/
+      /* margin-top: 50px;
+      margin-bottom: 100px; */
+
+      /* auto tự động căn chỉnh left right*/ 
+      margin: 0 auto;
+
+      /* padding lề bên trong tạo vùng đệm cho element */
+      padding: 50px;
+      padding: 10px 10px 10px 10px;
+      padding : 15px 20px 15px;
+
+      /*border*/
+      border: 20px solid green;
+      /*padding border làm tăng kích thước và phải tìm cách xử lý động
+      -> dùng box-sizing*/
+      box-sizing: border-box;
+      /* box-sizing: content-box; chỉ dùng khi muốn border-box trở về như default*/
+}
+
+.section{
+      padding: 15px 0px 15px;
+}
+
+.section-title {
+      color: green;
+      font-size: large;
+      font-weight: 700;
+      text-align: center;
+}
+
+.section-title-position {
+      color: brown;
+      font-size: x-large;
+      /*mặc định đã là static rồi chỉ dùng khi muốn reset ghi đè lại từ đầu*/
+      position:static;
+      position: relative;
+      left: 150px;
+      top: 100px;
+}
+
+.box {
+      position: static;
+      position: relative;
+      left: 10px;
+      top:25px;
+}
+
+.children {
+      /*absolute dịch chuyển theo thằng cha gần nhất có position # static*/
+      position: absolute;
+      right : 0px;
+      padding: 20px;
+}
+
+.header {
+      padding : 20px 150px 20px;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      background-color: antiquewhite;
+      z-index: 1;
+      /* position: fixed; */
+      position: sticky;
+}
+
+.container {
+      max-width: 1050px;
+      width: 100%;
+      margin: 0 auto;
+      background-color: aqua;
+      box-sizing: border-box;
+}
+
+.creator-item {
+      width: calc((100% - 90px) / 4);
+}
+
+.creator-image {
+      display: flex;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+}
+
+
+.creator-card {
+      background-color: grey;
+}
+
+.creator-info {
+      text-align: center;
+      color: white;
+}
+
+/*flex container*/
+.creator-list {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+}
+/*Flex border*/
